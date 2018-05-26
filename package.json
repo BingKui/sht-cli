@@ -1,0 +1,32 @@
+{
+  "name": "sht-cli",
+  "version": "0.0.2",
+  "description": "创建静态资源网站模板的cli工具。",
+  "bin": {
+    "sht": "./bin/sht"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BingKui/sht-cli.git"
+  },
+  "keywords": [
+    "cli",
+    "static-html-template"
+  ],
+  "author": "康兵奎",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BingKui/sht-cli/issues"
+  },
+  "homepage": "https://github.com/BingKui/sht-cli#readme",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "commander": "^2.15.1",
+    "download-git-repo": "^1.0.2",
+    "fs-extra": "^6.0.1",
+    "inquirer": "^5.2.0",
+    "ora": "^2.1.0",
+    "shelljs": "^0.8.2",
+    "which": "^1.3.1"
+  }
+}

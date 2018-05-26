@@ -1,0 +1,34 @@
+#!/usr/bin/env node
+
+// 引入命令行工具
+const program = require('commander');
+// 引入颜色改变库
+const chalk = require('chalk');
+const pkg = require('../package.json');
+
+const newCli = require('../lib/new');
+// const generateCli = require('../lib/generate');
+// const prettierCli = require('../lib/prettier');
+
+program.version(pkg.version)
+  .option('new', 'new a Ant Design Pro project.')
+  .option('new --no-auto-install', 'new a Ant Design Pro project.')
+  // .option('generate', 'generate template')
+  // .option('prettier', 'format code by prettier eslint')
+  // .option('n', 'new a Ant Design Pro project.')
+  // .option('n --no-auto-install', 'new a Ant Design Pro project.')
+  // .option('g', 'generate template')
+  // .option('p', 'format code by prettier eslint')
+  .parse(process.argv);
+
+if (program.new || program.n) {
+  newCli(process.argv);
+}
+
+// if (program.generate || program.g) {
+//   generateCli(process.argv);
+// }
+
+// if (program.prettier || program.p) {
+//   prettierCli(process.argv);
+// }
