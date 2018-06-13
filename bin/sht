@@ -2,33 +2,21 @@
 
 // 引入命令行工具
 const program = require('commander');
-// 引入颜色改变库
-const chalk = require('chalk');
 const pkg = require('../package.json');
 
 const newCli = require('../lib/new');
-// const generateCli = require('../lib/generate');
-// const prettierCli = require('../lib/prettier');
+const pageCli = require('../lib/page');
 
 program.version(pkg.version)
-  .option('new', 'new a Ant Design Pro project.')
-  .option('new --no-auto-install', 'new a Ant Design Pro project.')
-  // .option('generate', 'generate template')
-  // .option('prettier', 'format code by prettier eslint')
-  // .option('n', 'new a Ant Design Pro project.')
-  // .option('n --no-auto-install', 'new a Ant Design Pro project.')
-  // .option('g', 'generate template')
-  // .option('p', 'format code by prettier eslint')
+  .option('new', '新建一个静态页面项目')
+  .option('new --no-auto-install', '新建一个静态页面项目（不自动安装依赖）')
+  .option('page', '新建一个页面')
   .parse(process.argv);
 
 if (program.new || program.n) {
   newCli(process.argv);
 }
 
-// if (program.generate || program.g) {
-//   generateCli(process.argv);
-// }
-
-// if (program.prettier || program.p) {
-//   prettierCli(process.argv);
-// }
+if (program.page) {
+  pageCli(process.argv);
+}
