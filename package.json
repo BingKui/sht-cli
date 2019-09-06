@@ -1,6 +1,6 @@
 {
   "name": "sht-cli",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "创建静态资源网站模板的cli工具。",
   "bin": {
     "sht": "./bin/sht"
